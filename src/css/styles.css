@@ -1,4 +1,4 @@
-/* Page setup (no grid/header/footer) single page app */
+    /* Page setup */
     html, body {
         margin: 0;
         padding: 0;
@@ -23,21 +23,18 @@
         margin: 0 auto;
     }
 
-    /* BACKGROUND IMAGE */
     #ui-bg {
         display: block;
         width: 100%;
         height: auto;
     }
 
-    /* OVERLAY LAYER (for buttons & content) */
     #ui-overlay {
         position: absolute;
         inset: 0;
-        pointer-events: none;   /* children turn it back on where needed */
+        pointer-events: none;   
     }
 
-    /* CLICKABLE IMAGE BUTTON AREAS */
     .ui-btn {
         position: absolute;
         background-size: contain;
@@ -47,7 +44,7 @@
         cursor: pointer;
         pointer-events: auto;
 
-        opacity: 0;                  /* start invisible */
+        opacity: 0;                  /* button img overlay starts invisible */
         transition: opacity 0.25s ease;
     }
 
@@ -60,12 +57,15 @@
     opacity: 1 !important;
 }
 
-    /*
-      BUTTON POSITIONS (percentages relative to the image).
-      These are tuned for your current layout but you can tweak them.
-    */
+    #btn-lg99, #btn-lg77, #btn-reset, #btn-copy {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
 
-    /* LG99 */
+        opacity: 0;              
+        transition: opacity .15s ease;
+    }
+
     #btn-lg99 {
         left:12.18%;
         top: 9.45%;
@@ -73,15 +73,8 @@
         height: 13.95%;
 
         background-image: url('../img/lg99-clicked.png');  
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        opacity: 0;              /* OFF by default */
-        transition: opacity .15s ease;
     }
 
-    /* LG77 */
     #btn-lg77 {
         left: 12.1%;
         top: 24.18%;
@@ -89,15 +82,8 @@
         height: 13.9%;
 
         background-image: url('../img/lg77-clicked.png');  
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        opacity: 0;              /* OFF by default */
-        transition: opacity 1 ease;
     }
 
-    /* RESET */
     #btn-reset {
         left: 12.3%;
         top: 38.9%;
@@ -105,15 +91,8 @@
         height: 13.6%;
 
         background-image: url('../img/reset-clicked.png');  
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        opacity: 0;              /* OFF by default */
-        transition: opacity 1 ease;
     }
 
-    /* COPY */
     #btn-copy {
         left: 12.2%;
         top: 53.35%;
@@ -121,18 +100,11 @@
         height: 13.85%;
 
          background-image: url('../img/copy-clicked.png');  
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        opacity: 0;              /* OFF by default */
-        transition: opacity 1 ease;
     }
 
-    /* blue screen display area */
     #screen-content {
         position: absolute;
-        pointer-events: auto;      /* so we can click & type here */
+        pointer-events: auto;      
         left: 39.25%;
         top: 18%;
         width: 19.7%;
@@ -146,7 +118,7 @@
         padding: 12px;
     }
 
-    /* Scrollbar styling is optional */
+    /* Scrollbar styling WIP*/
     #screen-content::-webkit-scrollbar {
         width: 4px;
     }
@@ -155,7 +127,7 @@
         border-radius: 4px;
     }
 
-    /* HEADINGS INSIDE THE SCREEN */
+    /* led screen headers */
     #screen-content h2 {
         font-size: 1.4rem;
         margin-top: 5px;
@@ -163,15 +135,14 @@
         text-align: center;
     }
 
-    /* FORMS STYLING INSIDE SCREEN */
     #screen-content label {
-        display: block;          /* this is the key part */
-        visibility: hidden; /* hide labels visually but keep for screen readers */
+        display: block;          
+        visibility: hidden; 
     text-align: left;
-    margin: 8px 0 3px;       /* space above/below the label */
+    margin: 8px 0 3px;       
     font-size: .95rem;
 
-    white-space: pre-line; /* preserve line breaks and spaces */
+    white-space: pre-line; /* preserve <br> for question/answer formatting */
     }
 
     #screen-content input[type="text"],
