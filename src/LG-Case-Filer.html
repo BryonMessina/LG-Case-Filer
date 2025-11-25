@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+<title>Login.gov Console</title>
+
+</head>
+<body>
+
+<div id="ui-wrapper">
+    <img id="ui-bg" src="img/lg-console.png" alt="Console UI">
+
+    <div id="ui-overlay">
+
+        <button class="ui-btn" id="btn-lg99" type="button" onclick="showLG99()"></button>
+        <button class="ui-btn" id="btn-lg77" type="button" onclick="showLG77()"></button>
+        <button class="ui-btn" id="btn-reset" type="button" onclick="resetActiveForm()"></button>
+        <button class="ui-btn" id="btn-copy" type="button" onclick="copyActiveForm()"></button>
+
+        <div id="screen-content">
+
+            <div id="LG99Page" class="page">
+                <h2>LG99</h2>
+                <form id="myFormLG99">
+                    <label for="emailControlLG99">Do you control the email address associated with your account?</label>
+                    <input type="text" id="emailControlLG99" name="emailControl" required>
+
+                    <label for="neverMetHelpLG99">Did anyone — especially someone you've never met in person or only know online — ask you to create this account, help you set it up, or guide you through any part of the process?<br><br>-If yes: Please explain.</label>
+                    <input type="text" id="neverMetHelpLG99" name="neverMetHelp" required>
+
+                    <label for="unusualAdviceLG99">Did anyone give you any unusual advice or instructions that led you to create your account?</label>
+                    <input type="text" id="unusualAdviceLG99" name="unusualAdvice" required>
+
+                    <label for="businessAssistLG99">Did a business or company assist you in the creation of your account or in the verification process?<br><br>-If yes: Is this a business or company you have used before?</label>
+                    <input type="text" id="businessAssistLG99" name="businessAssist" required>
+
+                    <label for="currentLocationLG99">What city and state (or location) are you currently calling from?</label>
+                    <input type="text" id="currentLocationLG99" name="currentLocation" required>
+
+                    <label for="locationWhenVerifyingLG99">What city and state (or location) were you in when you attempted to complete the verification process?</label>
+                    <input type="text" id="locationWhenVerifyingLG99" name="locationWhenVerifying" required>
+
+                    <label for="inMilitaryLG99">Are you in the military or located on a military base?</label>
+                    <input type="text" id="inMilitaryLG99" name="inMilitary" required>
+
+                    <label for="usingVPNLG99">Do you use a virtual private network, also known as a VPN, when using the internet? <br><br>-If yes: what location do you have it set to? <br> --If the user does not know, it is okay to move on from the question.</label>
+                    <input type="text" id="usingVPNLG99" name="usingVPN" required>
+
+                    <label for="whichBrowserLG99">Do you remember which browser you used during the identity verification process?<br><br>-If yes: which browser did you use? (Examples: Edge, Chrome, Safari, Firefox)<br>--If the user does not know, it is okay to move on from the question.</label>
+                    <input type="text" id="whichBrowserLG99" name="whichBrowser" required>
+
+                    <label for="triedToBackTrackLG99">At any point during the Login.gov identity verification process did you try to go back to a page or attempt to start the process over?</label>
+                    <input type="text" id="triedToBackTrackLG99" name="triedToBackTrack" required>
+
+                    <label for="wereThereAnyProblemsLG99">Did you encounter any other difficulties or problems during the Login.gov identity verification process?<br><br>-If yes: Please explain.</label>
+                    <input type="text" id="wereThereAnyProblemsLG99" name="wereThereAnyProblems" required>
+
+                    <label for="phoneUsedToVerifyLG99">Is the phone number you are calling from the same one used in the Login.gov identity verification process?<br><br>-If not, what is the phone number you used during the verification process?</label>
+                    <input type="text" id="phoneUsedToVerifyLG99" name="phoneUsedToVerify" required>
+
+                    <label for="devicesUsedLG99">What device did you use during the Login.gov identity verification process?<br><br>Examples: computer/laptop (Mac, Lenovo, etc), phone (android, iPhone, etc), tablet (iPad, android, etc.)</label>
+                    <input type="text" id="devicesUsedLG99" name="devicesUsed" required>
+
+                    <label for="alternateContactLG99">Is there an alternate email address or phone number associated with your Login.gov account?<br><br>-If yes: can you provide the alternative email address/phone number?</label>
+                    <input type="text" id="alternateContactLG99" name="alternateContact" required>
+                </form>
+            </div>
+
+            <div id="LG77Page" class="page">
+                <h2>LG77</h2>
+                <form id="myFormLG77">
+                    <label for="completedVerificationLG77">Have you completed the verification process with Login.gov?<br><br>-If yes: Is the phone number you are calling from the same one used when you completed the Login.gov identity verification process?<br>--If not: what is the phone number used at that time (if you remember)?<br>--If the user cannot remember this information, it is okay to record this fact and move on from the question.</label>
+                    <input type="text" id="completedVerificationLG77" name="completedVerification" required>
+
+                    <label for="unknownAssistanceLG77">Did anyone — especially someone you've never met in person or only know online — ask you to create this account, help you set it up, or guide you through any part of the process?<br><br>-If yes: Please explain.</label>
+                    <input type="text" id="unknownAssistanceLG77" name="unknownAssistance" required>
+
+                    <label for="currentLocationLG77">What city and state (or location) are you currently calling from?</label>
+                    <input type="text" id="currentLocationLG77" name="currentLocation" required>
+
+                    <label for="locationWhenVerifyingLG77">What city and state (or location) were you in when you attempted to access your account?</label>
+                    <input type="text" id="locationWhenVerifyingLG77" name="locationWhenVerifying" required>
+
+                    <label for="usedVPNLG77">Do you use a virtual private network, also known as a VPN, when using the internet?<br><br>-If yes: do you know what location you have it set to?<br>If the user does not know, it is okay to move on from the question.</label>
+                    <input type="text" id="usedVPNLG77" name="usedVPN" required>
+
+                    <label for="usedANewDeviceRecentlyLG77">Have you accessed your Login.gov account from a new device or location recently?<br><br>-If yes: can you provide more information about this (e.g. type of device used or location they were in)?</label>
+                    <input type="text" id="usedANewDeviceRecentlyLG77" name="usedANewDeviceRecently" required>
+
+                    <label for="puiblicOrWorkDeviceLG77">Did you attempt to access your Login.gov account from a public or work device?<br><br>-If yes: can you provide more information about this?</label>
+                    <input type="text" id="puiblicOrWorkDeviceLG77" name="puiblicOrWorkDevice" required>
+
+                    <label for="otherPeopleHaveAccessLG77">Has anyone else had access to your device or Login.gov account login credentials?</label>
+                    <input type="text" id="otherPeopleHaveAccessLG77" name="otherPeopleHaveAccess" required>
+
+                    <label for="alternateContactLG77">Is there an alternate email address or phone number associated with your Login.gov account?</label>
+                    <input type="text" id="alternateContactLG77" name="alternateContact" required>
+                </form>
+            </div>
+
+        </div> <!-- /screen-content -->
+    </div> <!-- /ui-overlay -->
+</div> <!-- /ui-wrapper -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
