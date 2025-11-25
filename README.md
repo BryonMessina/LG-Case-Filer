@@ -1,8 +1,26 @@
 # LG-Case-Filer
-A proof of concept application to simply the format and process of LG77 and LG99 case questions
+LG-Case-Filer is a lightweight, front-end–only proof-of-concept application designed to streamline and standardize LG77 and LG99 case questions. It helps reduce manual typing, improve consistency, and simplify the overall workflow for agents.
 
-As-Is this is a front end only application, it has not been deployed. The idea could be scaled to cover a few functions or sets of data agents dont currently have access to. The theme/format of the application is currently in the style of a game. (can be changed)
+Purpose
+-Provide a quick, structured way to fill out LG case questions
+-Auto-format responses for easy copy-and-paste into notes
+-Ensure all LG questions follow a consistent, up-to-date format
+-Demonstrate how case logic tools could reduce call and handling time
 
-Full cuntionality could include things like what agencies are email-only, LG case logic to reduce some call times. (not having to manually type out questions, just fill out the questions, hit copy, and paste the answers into notes. (this would also make sure all LG questions are formatted the same, and would be manually updated when we have any changes to LG questions)
+Current Status
+-Front-end only
+-No backend, database, or API
+-No data is stored — all inputs are cleared when the app is closed or refreshed
+-The UI uses a game-style theme (can be changed)
 
-There is currently no database/api so nothing used on the application is saved, and since i have no certifications to protect that data, would prefer it remain that way. On closing the application any typed text should be lost.
+Future Possibilities
+-Reference pages for information KA's do not provide such as: email-only agencies
+-More LG logic tools to assist with case workflows
+-Expansion to additional question sets or internal processes
+
+Data & Privacy
+-Because no data is saved or transmitted, nothing is shared over the wire.
+
+Usage
+-Currently requires a download to run the .html or to be loaded on a live server through something like VS code.
+-If this were to be allowed as an approved resource i can deploy it through a service such as Ionos, or a different service if one is preferred at my own expense.
