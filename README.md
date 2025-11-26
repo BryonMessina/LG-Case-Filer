@@ -22,4 +22,4 @@ Data & Privacy
 
 Usage
 -Currently requires a download to run the .html or to be loaded on a live server through something like VS code.
--If this were to be allowed as an approved resource i can deploy it through a service such as Ionos, or a different service if one is preferred at my own expense.
+-If this were to be allowed as an approved resource i can deploy it through a service such as Ionos, or a different service if one is preferred at my own expense. 
